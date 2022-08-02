@@ -2,6 +2,7 @@ from flask import Flask, jsonify, render_template, request
 import pickle
 import numpy as np
 import pandas as pd
+import os
 
 app = Flask(__name__)
 model = pickle.load(open("model/model.pkl", "rb"))
@@ -21,4 +22,4 @@ def predict():
     return render_template("index.html", Prediction=f"The predicted :{prediction[0]}")
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(host="0.0.0.0",port=os.environ.get("PORT", 5000))
