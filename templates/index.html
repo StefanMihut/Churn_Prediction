@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div class = "Features">
+    <h1>Features</h1>
+ 
+<form action="{{url_for('predict')}}"method="post">
+  <label for="fname">Customer_Age: </label>
+  <input type="text" id="Customer_Age" name="Customer_Age"><br><br>
+  <label for="lname">Dependent_count: </label>
+  <input type="text" id="Dependent_count" name="Dependent_count"><br><br>
+  <label for="fname">Months_on_book: </label>
+  <input type="text" id="Months_on_book" name="Months_on_book"><br><br>
+  <label for="fname">Total_Relationship_Count: </label>
+  <input type="text" id="Total_Relationship_Count" name="Total_Relationship_Count"><br><br>
+  <label for="fname">Months_Inactive_12_mon: </label>
+  <input type="text" id="Months_Inactive_12_mon" name="Months_Inactive_12_mon"><br><br>
+  <label for="fname">Contacts_Count_12_mon: </label>
+  <input type="text" id="Contacts_Count_12_mon" name="Contacts_Count_12_mon"><br><br>
+  <label for="fname">Credit_Limit: </label>
+  <input type="text" id="Credit_Limit" name="Credit_Limit"><br><br>
+  <label for="fname">Total_Trans_Amt: </label>
+  <input type="text" id="Total_Trans_Amt" name="Total_Trans_Amt"><br><br>
+  <label for="fname">Avg_Utilization_Ratio: </label>
+  <input type="text" id="Avg_Utilization_Ratio" name="Avg_Utilization_Ratio"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<br>
+<br>
+{{ Prediction }}
+</body>
+</html>
